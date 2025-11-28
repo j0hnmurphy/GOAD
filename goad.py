@@ -48,6 +48,9 @@ class Goad(cmd.Cmd):
     def default(self, line):
         print()
 
+    def emptyline(self):
+        pass
+
     def do_help(self, arg):
         print_menu(self.lab_manager)
 

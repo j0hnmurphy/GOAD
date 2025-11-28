@@ -23,6 +23,7 @@ boxes.append(
   config.vm.provider "vmware_desktop" do |v|
     v.force_vmware_license = "workstation"  # force the licence for fix some vagrant plugin issue
     # v.gui = true
+    v.utility_certificate_path = "#{ENV['HOME']}/.goad/certs"
   end
 
   # disable rdp forwarded port inherited from StefanScherer box

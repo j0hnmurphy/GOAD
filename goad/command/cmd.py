@@ -106,7 +106,7 @@ class Command:
             return False
         return True
 
-    def check_ram(self, min_ram_gb=24):
+    def check_ram(self, min_ram_gb=10):
         total_ram_gb = psutil.virtual_memory().total / (1024 ** 3)  # Convert bytes to GB
         if total_ram_gb < min_ram_gb:
             Log.error('not enough ram on the system')
